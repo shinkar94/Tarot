@@ -6,6 +6,9 @@ import Theme from './ThemeData'
 import {InfoTarot} from "../features/InfoTarot/InfoTarot";
 import {TransitionLine} from "../common/TransitionLine";
 import {Programme} from "../features/Programm/Programme";
+import {TariffPlan} from "../features/Tariff/TariffPlan";
+
+
 function App() {
   return (
     <div className="App">
@@ -14,6 +17,8 @@ function App() {
             <InfoTarot />
             <TransitionLine nameLine={'Программа'}/>
             <Programme />
+            <TransitionLine nameLine={'Тарифы'}/>
+            <TariffPlan />
         </ThemeProvider>
     </div>
   );

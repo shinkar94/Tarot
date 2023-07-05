@@ -12,12 +12,12 @@ export const Header = () => {
                 <div className="bar"></div>
                 <nav>
                     <ul>
-                        <li><a href="#link-program">Актуальная программа</a></li>
+                        <li><a href="#link-program">Программа</a></li>
                         <li><a href="#modalcal" className="modalcal">Календарь</a></li>
                         <li><a href="#link-prising">Тарифы</a></li>
                         <li><a href="#link-author">Об авторе</a></li>
                         <li><a href="#link-feedback">Отзывы</a></li>
-                        <li><a href="#link-faq">Ответы на частые вопросы</a></li>
+                        <li><a href="#link-faq">Ответы на вопросы</a></li>
                         <li><a href="#link-contact">Контакты</a></li>
                     </ul>
                 </nav>
@@ -49,7 +49,6 @@ const StHeader = styled.header`
             color: #b34d36;
             font-weight: bold;
             font-family: "Merriweather",serif;
-            text-align: center;
             &:hover{
               text-decoration: underline;
             }

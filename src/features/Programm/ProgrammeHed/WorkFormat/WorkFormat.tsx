@@ -16,7 +16,7 @@ export const WorkFormat:FC<WorkFormatType> = observer(({format_date}) => {
             <div className="format-title"><h3>Формат работы:</h3></div>
             <div className="format-description">
                 <p className="chat-tel">ЧАТ В TELEGRAM</p>
-                {paragraph.map(el => <p>{el}</p>)}
+                {paragraph.map((el, index) => <p key={index}>{el}</p>)}
                 <h3>{program_description}</h3>
             </div>
         </StWorkFormat>

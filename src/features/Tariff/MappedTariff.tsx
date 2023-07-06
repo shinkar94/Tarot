@@ -13,11 +13,11 @@ export const MappedTariff = () => {
         {
             tariffData.map(tariff => {
                 return(
-                    <StTariffCard>
+                    <StTariffCard key={tariff.id}>
                         <h3>{tariff.name}</h3>
                         <p>{tariff.price}</p>
                         <p>Осталось {tariff.places} мест</p>
-                        <img src={recordImg} alt="recordImg"/>
+                        <img src={recordImg} alt="recordImg" className={'tariffImg'}/>
                         <h3>Оставить Заявку</h3>
                         <MappedDescription description={tariff.description}/>
                         {tariff.extra.length > 0 && <MappedExtra extraData={tariff.extra}/>}
@@ -31,5 +31,7 @@ export const MappedTariff = () => {
 };
 
 const StTariffCard = styled.div`
-
+  .tariffImg{
+    width: 10vw;
+  }
 `

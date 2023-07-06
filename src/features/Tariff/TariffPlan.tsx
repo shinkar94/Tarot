@@ -11,7 +11,4 @@ export const TariffPlan = () => {
 };
 const ContainerTariff = styled.div`
   display: flex;
-  & img{
-    width: 10vw;
-  }
 `

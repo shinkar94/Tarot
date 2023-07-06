@@ -7,6 +7,7 @@ import {InfoTarot} from "../features/InfoTarot/InfoTarot";
 import {TransitionLine} from "../common/TransitionLine";
 import {Programme} from "../features/Programm/Programme";
 import {TariffPlan} from "../features/Tariff/TariffPlan";
+import {ReviewsPage} from "../features/Reviews/ReviewsPage";
 
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
             <Programme />
             <TransitionLine nameLine={'Тарифы'}/>
             <TariffPlan />
+            <TransitionLine nameLine={'Отзывы'}/>
+            <ReviewsPage />
         </ThemeProvider>
     </div>
   );

@@ -9,6 +9,7 @@ import {Programme} from "../features/Programm/Programme";
 import {TariffPlan} from "../features/Tariff/TariffPlan";
 import {ReviewsPage} from "../features/Reviews/ReviewsPage";
 import {AllInfos} from "../features/AllInfos/AllInfos";
+import {Footer} from "../features/Footer/Footer";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <TransitionLine nameLine={'Отзывы'}/>
             <ReviewsPage />
             <AllInfos />
+            <Footer />
         </ThemeProvider>
     </div>
   );

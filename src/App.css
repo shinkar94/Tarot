@@ -11,3 +11,8 @@
     font-family: kamerik-205-heavy;
     src: url('./assets/fonts/kamerik/Kamerik 205 Heavy.ttf');
 }
+
+::-webkit-scrollbar {
+    width: 0;
+    background: none;
+}

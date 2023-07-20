@@ -21,10 +21,14 @@ const StTransition = styled.div`
   & p{
     width: 20%;
     text-align: center;
+    font-size: calc(var(--index));
+    font-family: merriweather-italic, serif;
+    font-weight: bold;
+    color: var(--global-color);
   }
   .line{
     height: 2px;
     width: 45vw;
-    background: black;
+    background: var(--global-color);
   }
 `

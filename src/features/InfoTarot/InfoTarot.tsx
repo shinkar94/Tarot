@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import AuthorImg from '../../img/Author.png'
+import AuthorImg from '../../img/aftor2.png'
 import BackImg from '../../img/topim.jpg'
 
 export const InfoTarot = () => {
@@ -20,7 +20,9 @@ export const InfoTarot = () => {
                 <p className="header-p">Разбуди свой финансовый потенциал за 3 недели
                     с помощью работы с подсознанием, карт Таро и нумерологии.
                     Диагностическая консультация -<span className="sp-hed">БЕСПЛАТНО!!</span></p>
-                <span className="reg-buttom"><a href="#modalca" className="modalca zapp">Записаться на консультацию</a></span>
+                <div className={'container-btn'}>
+                    <button className="reg-buttom">Записаться на консультацию</button>
+                </div>
             </div>
         </InfoBlock>
     );
@@ -29,31 +31,88 @@ export const InfoTarot = () => {
 const InfoBlock = styled.div`
   position: relative;
   display: flex;
-
-  .back_img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100vw;
-    z-index: -1;
-    border-radius: 10vw 50vw 3vw 50vw;
-    overflow: hidden;
-    .img_back {
-      width: 100%;
-      height: 100%;
-      background-image: url(${BackImg});
-      background-size: cover;
-      background-position: center center;
+  padding: 0 20px;
+  .log_img {
+    & img {
+      max-width: 200px;
     }
+  }
 
-    .img_shadow {
+  .header-text {
+    .back_img {
       position: absolute;
       top: 0;
       left: 0;
-      width: 100vw;
       height: 100%;
-      background: rgba(229, 214, 183, 0.63);
+      width: 100vw;
+      z-index: -1;
+      border-radius: 10vw 35vw 3vw 50vw;
+      overflow: hidden;
+
+      .img_back {
+        width: 100%;
+        height: 100%;
+        background-image: url(${BackImg});
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .img_shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100%;
+        background: rgba(229, 214, 183, 0.83);
+      }
     }
+
+    .header-h1 {
+      font-family: kamerik-205-heavy, serif;
+      font-size: calc(var(--index) * 2.5);
+      text-align: center;
+      color: transparent;
+      background-image: linear-gradient(to bottom, #f25d19, #af1523);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .header-p {
+      font-size: calc(var(--index) * 1.2);
+      font-family: merriweather-italic, serif;
+      color: #660000;
+      .sp-hed{
+        padding: 0.1rem;
+        border-radius: 0.3rem;
+        background: linear-gradient(to right, #F45F16,#E74856, #E8182A);
+        text-transform: uppercase;
+        font-weight: 500;
+        color: aliceblue;
+      }
+    }
+
+    .container-btn {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 5vw;
+
+      .reg-buttom {
+        padding: 5px;
+        border-radius: 5px;
+        text-decoration: none;
+        background: linear-gradient(to right, #F45F16, #E74856, #E8182A);
+        font-family: kamerik-205-heavy, serif;
+        font-size: var(--index);
+        color: #ffffff;
+        cursor: pointer;
+        box-shadow: 0 0 10px black;
+
+        &:hover {
+          border: 2px solid #ffc500;
+        }
+      }
+    }
+
   }
+
 `

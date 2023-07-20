@@ -60,7 +60,7 @@ const StMenu = styled.div<{ $test: boolean }>`
         a {
           text-decoration: none;
           font-size: 22px;
-          color: #b34d36;
+          color: var(--global-color);
           font-weight: bold;
           font-family: "Merriweather", serif;
 

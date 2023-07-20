@@ -1,0 +1,13 @@
+:root{
+    --index: calc(1vw + 1vh);
+    --global-color: #B34D36;
+}
+
+@font-face {
+    font-family: merriweather-italic;
+    src: url('./assets/fonts/merriweather/Merriweather-Italic.ttf');
+}
+@font-face {
+    font-family: kamerik-205-heavy;
+    src: url('./assets/fonts/kamerik/Kamerik 205 Heavy.ttf');
+}

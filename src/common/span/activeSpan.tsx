@@ -17,4 +17,5 @@ const StSpan = styled.span`
   text-transform: uppercase;
   font-weight: 500;
   color: aliceblue;
+  font-family: kamerik-205-heavy,serif;
 `

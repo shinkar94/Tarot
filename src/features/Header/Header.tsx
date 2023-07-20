@@ -19,7 +19,10 @@ const StHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 0 5px;
-  .btn_calendar{
-    
+  box-shadow: 0 5px 5px #6c6c6c;
+  margin-bottom: 10px;
+
+  .btn_calendar {
+
   }
 `

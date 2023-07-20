@@ -2,8 +2,13 @@ import React from 'react';
 import styled from "styled-components";
 import AuthorImg from '../../img/aftor2.png'
 import BackImg from '../../img/topim.jpg'
+import {Button} from "../../common/button/button";
+import {ActiveSpan} from "../../common/span/activeSpan";
 
 export const InfoTarot = () => {
+    const openConsultation = () => {
+        console.log('test')
+    }
     return (
         <InfoBlock>
             <div className="log_img"><img src={AuthorImg} alt="AuthorImg"/></div>
@@ -19,9 +24,9 @@ export const InfoTarot = () => {
                     Материалы и доступ в закрытый чат с единомышленницами останутся с тобой навсегда.</p>
                 <p className="header-p">Разбуди свой финансовый потенциал за 3 недели
                     с помощью работы с подсознанием, карт Таро и нумерологии.
-                    Диагностическая консультация -<span className="sp-hed">БЕСПЛАТНО!!</span></p>
+                    Диагностическая консультация -<ActiveSpan name={'Бесплатно!!'}/></p>
                 <div className={'container-btn'}>
-                    <button className="reg-buttom">Записаться на консультацию</button>
+                    <Button name={'Записаться на консультацию'} callBack={openConsultation}/>
                 </div>
             </div>
         </InfoBlock>
@@ -48,7 +53,6 @@ const InfoBlock = styled.div`
       z-index: -1;
       border-radius: 10vw 35vw 3vw 50vw;
       overflow: hidden;
-
       .img_back {
         width: 100%;
         height: 100%;
@@ -56,7 +60,6 @@ const InfoBlock = styled.div`
         background-size: cover;
         background-position: center center;
       }
-
       .img_shadow {
         position: absolute;
         top: 0;
@@ -66,7 +69,6 @@ const InfoBlock = styled.div`
         background: rgba(229, 214, 183, 0.83);
       }
     }
-
     .header-h1 {
       font-family: kamerik-205-heavy, serif;
       font-size: calc(var(--index) * 2.5);
@@ -76,43 +78,15 @@ const InfoBlock = styled.div`
       -webkit-background-clip: text;
       background-clip: text;
     }
-
     .header-p {
       font-size: calc(var(--index) * 1.2);
       font-family: merriweather-italic, serif;
       color: #660000;
-      .sp-hed{
-        padding: 0.1rem;
-        border-radius: 0.3rem;
-        background: linear-gradient(to right, #F45F16,#E74856, #E8182A);
-        text-transform: uppercase;
-        font-weight: 500;
-        color: aliceblue;
-      }
     }
-
     .container-btn {
       display: flex;
       justify-content: flex-end;
       padding-right: 5vw;
-
-      .reg-buttom {
-        padding: 5px;
-        border-radius: 5px;
-        text-decoration: none;
-        background: linear-gradient(to right, #F45F16, #E74856, #E8182A);
-        font-family: kamerik-205-heavy, serif;
-        font-size: var(--index);
-        color: #ffffff;
-        cursor: pointer;
-        box-shadow: 0 0 10px black;
-
-        &:hover {
-          border: 2px solid #ffc500;
-        }
-      }
     }
-
   }
-
 `

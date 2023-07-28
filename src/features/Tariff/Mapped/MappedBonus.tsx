@@ -20,10 +20,20 @@ export const MappedBonus:FC<MappedBonusType> = ({bonus}) => {
 };
 
 const StBonusCard = styled.div`
+  & > h2{
+    font-size: var(--index);
+    text-align: center;
+    background: linear-gradient(90deg, #C13764, #1F2671);
+    color: white;
+  }
   & > p,h3{
     margin: 4px;
     font-size: var(--index);
     cursor: pointer;
+  }
+  & > p{
+    font-family: merriweather-italic, sans-serif;
+    padding: 2px;
   }
   & > p:hover{
     background: #B34D36;
@@ -32,5 +42,6 @@ const StBonusCard = styled.div`
   }
   & img{
     width: 1.3vw;
+    margin-right: 3px;
   }
 `

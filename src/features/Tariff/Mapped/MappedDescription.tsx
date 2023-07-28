@@ -24,10 +24,21 @@ export const MappedDescription:FC<MappedDescriptionType> = ({description}) => {
 };
 
 const DescriptionCard = styled.div`
+  & > h3{
+    background-image: linear-gradient(90deg, #f25d19, #af1523);
+    color: white;
+    font-family: merriweather-italic, sans-serif;
+    padding: 2px;
+    border-radius: 5px;
+  }
   & > p,h3{
     margin: 4px;
     font-size: var(--index);
     cursor: pointer;
+  }
+  & > p{
+    font-family: merriweather-italic, sans-serif;
+    padding: 2px;
   }
   & > p:hover{
     background: #B34D36;
@@ -37,5 +48,6 @@ const DescriptionCard = styled.div`
   
   & img{
     width: 1.3vw;
+    margin-right: 3px;
   }
 `

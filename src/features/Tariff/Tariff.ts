@@ -34,7 +34,7 @@ export class Tariff {
     tariffData:TariffDataType[] = [
         {
             id: 1,
-            name: 'Пробуждение Лайт',
+            name: 'Пробуждение Light',
             price: '3990 руб',
             places: 10,
             description: [
@@ -70,7 +70,7 @@ export class Tariff {
         },
         {
             id: 3,
-            name: 'Пробуждение',
+            name: 'Пробуждение Plus',
             price: '15000 руб',
             places: 3,
             description: [

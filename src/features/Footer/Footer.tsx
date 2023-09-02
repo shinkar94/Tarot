@@ -5,9 +5,9 @@ export const Footer = () => {
     return (
         <StFooter>
             <div className={'Contact'}>
-                <p>Почта: milatarot21@gmail.com</p>
-                <p>Инстаграм: mila</p>
-                <p>Телеграм: mila</p>
+                <p>Почта: <span>milatarot21@gmail.com</span></p>
+                <p>Инстаграм: <span>mila</span></p>
+                <p>Телеграм: <span>mila</span></p>
             </div>
             <div className={'IP'}>
                 <p>Самозанятый</p>
@@ -15,8 +15,8 @@ export const Footer = () => {
                 <p>ИНН 34661201297912</p>
             </div>
             <div className={'docs'}>
-                <p>Политика конедициальности</p>
-                <p>Договор оферты</p>
+                <p><span>Политика конедициальности</span></p>
+                <p><span>Договор оферты</span></p>
             </div>
         </StFooter>
     );
@@ -24,4 +24,13 @@ export const Footer = () => {
 
 const StFooter = styled.div`
   display: flex;
+  justify-content: space-around;
+  box-shadow: 0 -5px 5px #6c6c6c;
+  & span{
+    color: #B34D36;
+    font-size: 24px;
+  }
+  & p{
+    margin: 2px;
+  }
 `

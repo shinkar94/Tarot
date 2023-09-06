@@ -21,14 +21,14 @@ export const MappedBonus:FC<MappedBonusType> = ({bonus}) => {
 
 const StBonusCard = styled.div`
   & > h2{
-    font-size: var(--index);
+    font-size: var(--index * 1.2);
     text-align: center;
     background: linear-gradient(90deg, #C13764, #1F2671);
     color: white;
   }
   & > p,h3{
     margin: 4px;
-    font-size: var(--index);
+    font-size: var(--index * 1.2);
     cursor: pointer;
   }
   & > p{

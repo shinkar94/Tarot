@@ -24,7 +24,7 @@ export const MappedExtra:FC<MappedExtraType> = ({extraData}) => {
 
 const ExtraCard = styled.div`
   & > h2{
-    font-size: var(--index);
+    font-size: var(--index * 1.2);
     text-align: center;
     background: linear-gradient(90deg, #C13764, #1F2671);
     color: white;
@@ -38,7 +38,7 @@ const ExtraCard = styled.div`
   }
   & > p,h3{
     margin: 4px;
-    font-size: var(--index);
+    font-size: var(--index * 1.2);
     cursor: pointer;
   }
   & > p{
@@ -51,7 +51,7 @@ const ExtraCard = styled.div`
     border-radius: 5px;
   }
   & img{
-    width: 1.3vw;
+    width: 1vw;
     margin-right: 3px;
   }
 `

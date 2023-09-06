@@ -33,7 +33,7 @@ const DescriptionCard = styled.div`
   }
   & > p,h3{
     margin: 4px;
-    font-size: var(--index);
+    font-size: var(--index * 1.2);
     cursor: pointer;
   }
   & > p{
@@ -47,7 +47,7 @@ const DescriptionCard = styled.div`
   }
   
   & img{
-    width: 1.3vw;
+    width: 1vw;
     margin-right: 3px;
   }
 `

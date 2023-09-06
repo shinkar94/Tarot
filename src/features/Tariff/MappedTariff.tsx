@@ -5,15 +5,17 @@ import {MappedExtra} from "./Mapped/MappedExtra";
 import {MappedBonus} from "./Mapped/MappedBonus";
 import {MappedDescription} from "./Mapped/MappedDescription";
 import styled, {css} from "styled-components";
+import {useWindowSize} from "../../assets/helper/useWindowSize";
 
 export const MappedTariff = () => {
     const {tariffData} = Tariff
+    const size = useWindowSize()
     return (
         <>
         {
             tariffData.map(tariff => {
                 return(
-                    <StTariffCard key={tariff.id} $color={tariff.id}>
+                    <StTariffCard key={tariff.id} $color={tariff.id} $size={size}>
                         <div className="cardHead">
                             <h3>{tariff.name}</h3>
                             <p>{tariff.price}</p>
@@ -32,11 +34,14 @@ export const MappedTariff = () => {
     );
 };
 
-const StTariffCard = styled.div<{$color:number}>`
+const StTariffCard = styled.div<{$color:number, $size:number}>`
   min-width: 300px;
-  max-width: 30vw;
+  max-width: 20vw;
   box-shadow: 0 5px 10px gray;
   border-radius: 10px;
+  ${(props) => props.$size < 1000 && css`
+    margin-top: 10px;
+  `}
 
   .cardHead {
     display: flex;
@@ -49,7 +54,7 @@ const StTariffCard = styled.div<{$color:number}>`
 
     & > h3 {
       margin: 0;
-      font-size: calc(var(--index));
+      font-size: var(--index * 1.2);
       font-family: merriweather-italic, sans-serif;
     }
 

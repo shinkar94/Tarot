@@ -1,22 +1,28 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from "styled-components";
 import userIcon from "../../img/icon/user.svg";
 import Reviews from './Reviews'
 
 export const ReviewsList = () => {
     const {reviews_data} = Reviews
+    const [review, setReviews] = useState(reviews_data[0])
+    useEffect(() => {
+        let start = 1
+        const interval = setInterval(() => {
+            start = (start + 1) % reviews_data.length;
+            setReviews(reviews_data[start])
+            start++
+        }, 10000)
+        return () => clearInterval(interval);
+    }, [reviews_data])
     return (
         <StReviewsList>
             <div className={'carusel'}>
-                {reviews_data.map(rev => {
-                    return(
-                        <div className={'list_block'} key={rev.id}>
-                            <img src={userIcon} alt="userIcon"/>
-                            <h4>{rev.name}</h4>
-                            <p>{rev.message}</p>
-                        </div>
-                    )
-                })}
+                <div className={'list_block'} >
+                    <img src={userIcon} alt="userIcon"/>
+                    <h4>{review.name}</h4>
+                    <p>{review.message}</p>
+                </div>
             </div>
 
         </StReviewsList>
@@ -25,24 +31,32 @@ export const ReviewsList = () => {
 
 const StReviewsList = styled.div`
   display: flex;
-  .carusel{
+  margin-top: 10px;
+
+  .carusel {
     display: flex;
-    width: 300px;
-    background: #B34D36;
+    min-width: 300px;
+    max-width: 500px;
+    min-height: 300px;
+    box-shadow: 0 0 4px 4px gray;
+    border-radius: 5px;
     overflow: hidden;
-    .list_block{
+
+    .list_block {
       display: flex;
       flex-direction: column;
       align-items: center;
       min-width: 280px;
       padding-left: 10px;
     }
-    & img{
+
+    & img {
       width: 4vw;
     }
-    & h4, p{
+
+    & h4, p {
       margin: 2px;
     }
   }
-  
+
 `

@@ -1,11 +1,15 @@
 import React from 'react';
 import {ReviewsList} from "./ReviewsList";
 import styled from "styled-components";
+import {Button} from "../../common/button/button";
 
 export const ReviewsPage = () => {
+    const openReviews = () =>{
+        //open form
+    }
     return (
         <WrapperReviews>
-            <button>Оставить отзыв</button>
+            <Button name={'Оставить отзыв'} callBack={openReviews}/>
             <ReviewsList />
         </WrapperReviews>
     );
